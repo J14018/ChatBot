@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>店情報入力フォーム</title>
+</head>
+
+<body bgcolor="#4387e9">
+  <font size = "7" color="#ffffff">
+  <h1>店情報入力フォーム</h1>
+  <font size = "7" color="#ffff00">※黄色い文字は必ず入力お願いします。</font>
+  <br />
+  <font size = "7" color="#ffff00">
+  郵便番号と電話番号はハイフンなしで入力お願いします。<br>
+  郵便番号を入力すると都道府県と市区町村が自動入力されます。
+
+  <!-- confirm.phpに送る -->
+  <form name="confirmForm" method="POST" action="confirm.php">
+
+    <font size = "7" color="#ffff00"><b>店　名　　</b></font><b>：</b>
+    　
+    <input style="width:320px;height:50px;font-size:50px;" type="text" name="shopname" required>
+    <br /><br />
+
+    <font size = "7" color="#ffff00"><b>住　所　　</b></font>
+    <br /><br />
+
+    <font size = "7" color="#ffff00"><b>郵便番号　</b></font><b>：</b>
+    　
+    <input style="width:320px;height:50px;font-size:50px;" type="tel" name="zipcode" onKeyUp="AjaxZip3.zip2addr(this,'','prefecture','city');">
+    <br /><br />
+
+    <font size = "7" color="#ffff00"><b>都道府県　</b></font><b>：</b>
+    　
+    <input style="width:320px;height:50px;font-size:50px;" type="text" name="prefecture" required></input>
+    <br /><br />
+
+    <font size = "7" color="#ffff00"><b>市区町村　</b></font><b>：</b>
+    　
+    <input style="width:320px;height:50px;font-size:50px;" type="text" name="city" required></input>
+    <br /><br />
+
+    <font size = "7" color="#ffff00"><b>番　地　　</b></font><b>：</b>
+    　
+    <input style="width:320px;height:50px;font-size:50px;" type="text" name="address" required></input>
+    <br /><br />
+
+    <font size = "7" color="#ffffff"><b>建　物　名</b><b>：</b></font>
+    　
+    <input style="width:320px;height:50px;font-size:50px;" type="text" name="buildname"></input>
+    <br /><br />
+
+    <font size = "7" color="#ffff00"><b>電話番号　</b></font><b>：</b>
+    　
+    <input style="width:320px;height:50px;font-size:50px;" type="tel" name="tel" placeholder="0001112222" required></input>
+    <br /><br />
+
+    <font size = "7" color="#ffff00"><b>味　　　　</b></font><b>：</b>
+    　
+    <input type="radio" style="width:50px;height:50px;" name="taste" value="あっさり" required/><font size = "7" color="#ffffff">あっさり</font>
+    　
+    <input type="radio" style="width:50px;height:50px;" name="taste" value="こってり" required/><font size = "7" color="#ffffff">こってり</font>
+    <br /><br />
+
+    <font size = "7" color="#ffffff"><b>チェーン店</b><b>：</b></font>
+    　
+    <select style="width:330px;height:50px;font-size:35px;" name="chainshop">
+      <option value="未記入">選択してください</option>
+      <option value="はい">はい</option>
+      <option value="いいえ">いいえ</option>
+    </select>
+    <br /><br />
+
+    <font size = "7" color="#ffffff"><b>最寄り駅　</b><b>：</b></font>
+    　
+    <select style="width:330px;height:50px;font-size:35px;" name="station">
+      <option value="未記入">選択してください</option>
+      <option value="熱海駅">熱海駅</option>
+      <option value="函南駅">函南駅</option>
+      <option value="三島駅">三島駅</option>
+      <option value="沼津駅">沼津駅</option>
+      <option value="片浜駅">片浜駅</option>
+      <option value="原駅">原駅</option>
+      <option value="東田子の浦駅">東田子の浦駅</option>
+      <option value="吉原駅">吉原駅</option>
+      <option value="富士駅">富士駅</option>
+      <option value="富士川駅">富士川駅</option>
+      <option value="新蒲原駅">新蒲原駅</option>
+      <option value="蒲原駅">蒲原駅</option>
+      <option value="由比駅">由比駅</option>
+      <option value="興津駅">興津駅</option>
+      <option value="清水駅">清水駅</option>
+      <option value="草薙駅">草薙駅</option>
+      <option value="東静岡駅">東静岡駅</option>
+      <option value="静岡駅">静岡駅</option>
+      <option value="安倍川駅">安倍川駅</option>
+      <option value="用宗駅">用宗駅</option>
+      <option value="焼津駅">焼津駅</option>
+      <option value="西焼津駅">西焼津駅</option>
+      <option value="藤枝駅">藤枝駅</option>
+      <option value="六合駅">六合駅</option>
+      <option value="島田駅">島田駅</option>
+      <option value="金谷駅">金谷駅</option>
+      <option value="菊川駅">菊川駅</option>
+      <option value="掛川駅">掛川駅</option>
+      <option value="愛野駅">愛野駅</option>
+      <option value="袋井駅">袋井駅</option>
+      <option value="磐田駅">磐田駅</option>
+      <option value="豊田町駅">豊田町駅</option>
+      <option value="天竜川駅">天竜川駅</option>
+      <option value="浜松駅">浜松駅</option>
+    </select>
+    <br /><br /><br />
+    <!-- 確認送信ボタン -->
+    <input type="submit" style="width:320px;height:75px;font-size:50px;" value="確認" />
+    　
+    <!-- リセットボタン -->
+    <input type="reset" style="width:320px;height:75px;font-size:50px;" value="リセット" />
+    <br /><br />
+
+    <!-- 戻るボタン -->
+    <input type="button" style="width:320px;height:75px;font-size:50px;" value="戻る" onclick="location.href='search.html'">
+
+  </form>
+
+  <script src="http://ec2-52-192-188-225.ap-northeast-1.compute.amazonaws.com/sotuken/private/jp/ajaxzip3.js" charset="UTF-8"></script>
+
+</body>
+</html>
