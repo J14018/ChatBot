@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Shop information input form</title>
+</head>
+
+<body bgcolor="#4387e9">
+  <font size = "7" color="#ffffff">
+  <h1>Shop information input form</h1>
+  <font size = "7" color="#ffff00">※ Please be sure to enter yellow characters.</font>
+  <br />
+  <font size = "7" color="#ffff00">
+  Please enter phone number without hyphen.
+
+  <!-- confirm.phpに送る -->
+  <form name="confirmForm" method="POST" action="confirm.php">
+
+    <table style="width:1000px;height:60px;font-size:50px;border-style:none;">
+  	<tr>
+  		<td style="color:#ffff00"><b>Shop name</b></td>
+  		<td style="color:#ffff00"><b>：　</b></td>
+  		<td><input style="width:320px;height:50px;font-size:50px;" type="text" name="shopname" required></input></td>
+  	</tr>
+  	<tr>
+  		<td style="color:#ffff00"><b>Address</b></td>
+  		<td style="color:#ffff00"><b>：　</b></td>
+  		<td><input style="width:320px;height:50px;font-size:50px;" type="text" name="address" required></input></td>
+  	</tr>
+  	<tr>
+  		<td style="color:#ffff00"><b>Phone number</b></td>
+  		<td style="color:#ffff00"><b>：　</b></td>
+  		<td><input style="width:320px;height:50px;font-size:50px;" type="tel" name="tel" placeholder="0001112222" required></input></td>
+  	</tr>
+  	<tr>
+  		<td style="color:#ffff00"><b>Taste</b></td>
+  		<td style="color:#ffff00"><b>：　</b></td>
+  		<td>
+        <input type="radio" style="width:50px;height:50px;" name="taste" value="Light" required/><font size = "7" color="#ffffff">Light</font>
+        <input type="radio" style="width:50px;height:50px;" name="taste" value="Rich" required/><font size = "7" color="#ffffff">Rich</font>
+      </td>
+  	</tr>
+  	<tr>
+  		<td style="color:#ffffff"><b>Chain shop</b></td>
+  		<td style="color:#ffffff"><b>：　</b></td>
+  		<td>
+        <select style="width:330px;height:50px;font-size:35px;" name="chainshop">
+          <option value="Blank">Please select</option>
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+        </select>
+      </td>
+  	</tr>
+  	<tr>
+  		<td style="color:#ffffff"><b>Nearest station</b></td>
+  		<td style="color:#ffffff"><b>：　</b></td>
+  		<td>
+        <select style="width:330px;height:50px;font-size:35px;" name="station">
+          <option value="Blank">Please select</option>
+          <option value="Atami station">Atami station</option>
+          <option value="Kannami station">Kannami station</option>
+          <option value="Mishima station">Mishima station</option>
+          <option value="Numazu station">Numazu station</option>
+          <option value="Katahama station">Katahama station</option>
+          <option value="Hara station">Hara Station</option>
+          <option value="Higashi-Tagonoura station">Higashi-Tagonoura station</option>
+          <option value="Yoshiwara station">Yoshiwara station</option>
+          <option value="Fuji station">Fuji station</option>
+          <option value="Fujikawa station">Fujikawa station</option>
+          <option value="Shin-Kambara station">Shin-Kambara station</option>
+          <option value="Kambara station">Kambara station</option>
+          <option value="Yui station">Yui station</option>
+          <option value="Okitsu station">Okitsu station</option>
+          <option value="Shimizu station">Shimizu station</option>
+          <option value="Kusanagi station">Kusanagi station</option>
+          <option value="Higashi-Shizuoka station">Higashi-Shizuoka station</option>
+          <option value="Shizuoka station">Shizuoka station</option>
+          <option value="Abekawa station">Abekawa station</option>
+          <option value="Mochimune station">Mochimune station</option>
+          <option value="Yaizu station">Yaizu station</option>
+          <option value="Nishi-Yaizu station">Nishi-Yaizu station</option>
+          <option value="Fujieda station">Fujieda station</option>
+          <option value="Rokugo station">Rokugo station</option>
+          <option value="Shimada station">Shimada station</option>
+          <option value="Kanaya station">Kanaya station</option>
+          <option value="Kikugawa station">Kikugawa station</option>
+          <option value="Kakegawa station">Kakegawa station</option>
+          <option value="Aino station">Aino station</option>
+          <option value="Fukuroi station">Fukuroi station</option>
+          <option value="Iwata station">Iwata station</option>
+          <option value="Toyodacho station">Toyodacho station</option>
+          <option value="Tenryugawa station">Tenryugawa station</option>
+          <option value="Hamamatsu station">Hamamatsu station</option>
+        </select>
+      </td>
+  	</tr>
+  	</table>
+    <br /><br /><br />
+
+    <!-- 確認送信ボタン -->
+    <input type="submit" style="width:320px;height:75px;font-size:50px;" value="Confirm" />
+    　
+    <!-- リセットボタン -->
+    <input type="reset" style="width:320px;height:75px;font-size:50px;" value="Reset" />
+    <br /><br />
+
+    <!-- 戻るボタン -->
+    <input type="button" style="width:320px;height:75px;font-size:50px;" value="Return" onclick="location.href='search.html'">
+
+  </form>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Ramen shop search</title>
+</head>
+
+<body bgcolor="#4387e9">
+
+  <font color="#ffffff">
+    <h1>Ramen shop search</h1>
+
+  <font color="#ffff00">
+    <h2>Using services</h2>
+  </font>
+
+  <font color="#ffffff">
+    ・Browser is correspondence Google Chrome only.<br><br>
+    ・If it does not work by confirmation question, please answer with yes or no.<br><br>
+    ・Repl-AI can not sometimes use it.<br><br>
+    <p><b>Please provide information on ramen shops.</b><br>
+    <button type="button" style="width:100px;height:25px;font-size:12px;" onclick="location.href='shop-info-input.html'">Input page</button></p>
+    <br><br><br><br><br><br><br><br>
+  </font>
+
+      <form name="form1">
+        <select name="select1" onChange="if(document.form1.select1.value){location.href=document.form1.select1.value;}">
+          <option>LANGUAGE</option>
+          <option value="http://ec2-52-192-188-225.ap-northeast-1.compute.amazonaws.com/sotuken/private/jp/search.html">日本語</option>
+        </select>
+      </form>
+  </font>
+
+  <link rel='stylesheet' href='repl-ai.css' type='text/css' media="all">
+  <div
+		id="repl-ai-widget"
+		data-chat-bg-color="#ffffff"
+		data-button-bgcolor="#ffffff"
+    data-chat-bg-image="https://s3-ap-northeast-1.amazonaws.com/ramenbot2/image/background.gif"
+		data-button-icon="https://s3-ap-northeast-1.amazonaws.com/ramenbot2/image/ramen-button-icon-en-sp180.png,https://s3-ap-northeast-1.amazonaws.com/ramenbot2/image/ramen-button-icon-en-sp360.png,https://s3-ap-northeast-1.amazonaws.com/ramenbot2/image/ramen-button-icon-en-pc120.png,https://s3-ap-northeast-1.amazonaws.com/ramenbot2/image/ramen-button-icon-en-pc240.png"
+		data-ai-icon-size="40"
+		data-ai-icon="https://s3-ap-northeast-1.amazonaws.com/ramenbot2/image/izumi30.png,https://s3-ap-northeast-1.amazonaws.com/ramenbot2/image/izumi60.png"
+		data-init-voice-text="init"
+		data-scenario-id="English"
+		data-bot-name="ramenbot"
+		data-bot-id="ramen"
+		data-api-key="IjxnoAy9gT2Je6fMM08DA8qCAl3wbWty6GWOug4H"
+    data-target-url="http://ec2-13-115-191-133.ap-northeast-1.compute.amazonaws.com/sotuken/en/ramenbot.html">
+  </div>
+  <script type='text/javascript' src='http://ec2-52-192-188-225.ap-northeast-1.compute.amazonaws.com/sotuken/private/en/repl-ai-widget.js'></script>
+
+</body>
+</html>
