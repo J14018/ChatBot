@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>ラーメン店検索</title>
+</head>
+
+<body bgcolor="#4387e9">
+
+  <font color="#ffffff">
+    <h1>ラーメン店検索</h1>
+  </font>
+
+  <font color="#ffff00">
+    <h2>注意事項</h2>
+  </font>
+
+  <font NAME="form2"color="#ffffff">
+    ・ブラウザはGoogle Chromeのみ対応しています。他のブラウザでは正常に動作しない可能性があります。<br><br>
+    ・確認の質問で動作しない場合には、“はい” ， “いいえ” で答えてください。<br><br>
+    ・Repl-AIのAPIの関係上コール数に制限があり、使用できない場合があります。<br><br>
+    <p><b>ラーメン店の情報提供お願いします。　</b><br>
+    <button type="button" style="width:100px;height:25px;font-size:12px;" onclick="location.href='shop-info-input.html'">入力ページ</button></p>
+    <br><br><br><br><br><br><br><br><br>
+  </font>
+
+  <form name="form1">
+    <select name="select1" onChange="if(document.form1.select1.value){location.href=document.form1.select1.value;}">
+      <option>LANGUAGE</option>
+      <option value="http://ec2-52-192-188-225.ap-northeast-1.compute.amazonaws.com/sotuken/private/en/search.html">ENGLISH</option>
+    </select>
+  </form>
+
+  <link rel='stylesheet' href='repl-ai.css' type='text/css' media="all">
+
+  <div
+		id="repl-ai-widget"
+		data-chat-bg-color="#ffffff"
+		data-button-bgcolor="#ffffff"
+    data-chat-bg-image="https://s3-ap-northeast-1.amazonaws.com/ramenbot2/image/background.gif"
+		data-button-icon="https://s3-ap-northeast-1.amazonaws.com/ramenbot2/image/ramen-button-icon-sp180.png,https://s3-ap-northeast-1.amazonaws.com/ramenbot2/image/ramen-button-icon-sp360.png,https://s3-ap-northeast-1.amazonaws.com/ramenbot2/image/ramen-button-icon-pc120.png,https://s3-ap-northeast-1.amazonaws.com/ramenbot2/image/ramen-button-icon-pc240.png"
+		data-ai-icon-size="40"
+		data-ai-icon="https://s3-ap-northeast-1.amazonaws.com/ramenbot2/image/izumi30.png,https://s3-ap-northeast-1.amazonaws.com/ramenbot2/image/izumi60.png"
+		data-init-voice-text="init"
+		data-scenario-id="Japanese"
+		data-bot-name="らーめんbot"
+		data-bot-id="ramen"
+		data-api-key="IjxnoAy9gT2Je6fMM08DA8qCAl3wbWty6GWOug4H"
+    data-target-url="http://ec2-52-192-188-225.ap-northeast-1.compute.amazonaws.com/sotuken/jp/ramenbot.html">
+  </div>
+
+  <script type='text/javascript' src='http://ec2-52-192-188-225.ap-northeast-1.compute.amazonaws.com/sotuken/private/jp/repl-ai-widget.js'></script>
+
+</body>
+</html>
